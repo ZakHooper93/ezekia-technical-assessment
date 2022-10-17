@@ -7,14 +7,17 @@
                 :src="require(`/src/assets/highlights/${this.highlightImage(item.image)}.jpg`)"
                 :class="imageOutlineColour(item.id)"
             />
-            <img :src="require(`../assets/icons/${pageTheme}.png`)" class="theme-icon" />
+            <img 
+                :src="require(`../assets/icons/${pageTheme}.png`)" 
+                class="theme-icon" 
+            />
             <h2 class="highlight-title">{{ item.name }}</h2>
             <div class="highlight-text">
                 <p v-if="item.description">{{ item.description }}</p>
                 <p v-if="item.info">{{ item.info }}</p>
                 <p v-if="item.news?.title">{{ item.news.title }}</p>
                 <p v-if="item.news?.date">{{ item.news.date }}</p>
-                <a :href="item.quiz" v-if="item.quiz">Take our {{pageTheme}} quiz!</a>
+                <a :href="item.quiz" v-if="item.quiz">Take our {{ pageTheme }} quiz!</a>
             </div>
         </li>
     </div>
@@ -31,6 +34,7 @@ export default {
             type: String
         }
     },
+
     methods: {
         highlightImage(highlightImage) {
             return highlightImage ? highlightImage : `${this.pageTheme}Placeholder`;
@@ -58,10 +62,10 @@ export default {
     list-style: none;
 }
 
-.highlight-image-museum, .highlight-image-partner {
+.highlight-image-museum,
+.highlight-image-partner {
     width: 400px;
     height: 400px;
-
 }
 
 .highlight-image-museum {
@@ -88,15 +92,18 @@ export default {
     height: 50px;
     margin: 0;
 }
+
 .key {
     font-size: 12px;
     font-weight: 1000;
     text-align: left;
     margin-left: 5%;
 }
+
 .key--blue {
     color: blue;
 }
+
 .key--orange {
     color: orange;
 }
