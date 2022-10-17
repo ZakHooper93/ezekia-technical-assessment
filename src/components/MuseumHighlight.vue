@@ -14,7 +14,7 @@
                 <p v-if="item.info">{{ item.info }}</p>
                 <p v-if="item.news?.title">{{ item.news.title }}</p>
                 <p v-if="item.news?.date">{{ item.news.date }}</p>
-                <a :href="item.quiz" v-if="item.quiz">Take our related quiz!</a>
+                <a :href="item.quiz" v-if="item.quiz">Take our {{pageTheme}} quiz!</a>
             </div>
         </li>
     </div>
