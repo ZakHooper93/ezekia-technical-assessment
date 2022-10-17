@@ -1,6 +1,6 @@
 <template>
-    <h2 class="blue-key">Core museum highlights</h2>
-    <h2 class="orange-key">From our partners</h2>
+    <h2 class="key key--blue">Blue - Central museum highlights</h2>
+    <h2 class="key key--orange">Orange - From our wonderful partners</h2>
     <div class="museum-highlight-grid">
         <li v-for="item in highlights" :key="item">
             <img
@@ -88,17 +88,16 @@ export default {
     height: 50px;
     margin: 0;
 }
-.blue-key,
-.orange-key {
+.key {
     font-size: 12px;
     font-weight: 1000;
     text-align: left;
     margin-left: 5%;
 }
-.blue-key {
+.key--blue {
     color: blue;
 }
-.orange-key {
+.key--orange {
     color: orange;
 }
 </style>
