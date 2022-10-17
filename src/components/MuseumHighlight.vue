@@ -81,15 +81,19 @@ export default {
 }
 
 .highlight-text {
-    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 400px;
     margin-bottom: 5%;
 }
 
 .theme-icon {
-    bottom: 100%;
-    left: 0%;
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    top: 1;
+    left: 1;
+    width: 100px;
+    height: 100px;
     margin: 0;
 }
 
